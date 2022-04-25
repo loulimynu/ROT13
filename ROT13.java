@@ -61,13 +61,14 @@ public class ROT13 {
                 //divide a string em caracteres a parte e
                 //aplica uma operação logica.
 		for(char a:str.toCharArray()) {
-			if(a >= 'A' && a <= 'Z') {//operação logica para encontra 
-				a += 13;          //equivalencia na tabela ASCII.
+			//operação logica para encontra equivalencia na tabela ASCII.
+			if(a >= 'A' && a <= 'Z') {//se caractere a maior que (A) e menor q (Z), siga esse procediemnto
+				a += 13;          
 				if(a > 'Z') {
 					a -= 26;
 				}
 			}
-			else if(a >= 'a' && a <= 'z') {
+			else if(a >= 'a' && a <= 'z') {//se caractere (a) maior que a e menor q (z), siga esse procediemnto
 				a += 13;
 				if(a > 'z') {
 					a -= 26;
